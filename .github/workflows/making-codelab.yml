@@ -26,17 +26,17 @@ jobs:
       - name: Making the HTML
         run: claat export codelab.md
       - name : Git add everything
-        run : git add .
-      - name: Setup git user
-        run: |
-          git config --global user.name "nischalon10"
-          git config --global user.email "nischalon10@gmail.com"
-      - name : Git Checkout to the pages branch
-        run : git checkout pages || git checkout -b pages
-      - name : Git Commit
-        run : git commit -m "Testing"
-      - name : Gti Push
-        run : git push --set-upstream origin pages
+        run : dir
+      # - name: Setup git user
+      #   run: |
+      #     git config --global user.name "nischalon10"
+      #     git config --global user.email "nischalon10@gmail.com"
+      # - name : Git Checkout to the pages branch
+      #   run : git checkout pages || git checkout -b pages
+      # - name : Git Commit
+      #   run : git commit -m "Testing"
+      # - name : Gti Push
+      #   run : git push --set-upstream origin pages
       
         
 
