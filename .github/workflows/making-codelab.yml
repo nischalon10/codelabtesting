@@ -1,40 +1,35 @@
-name: Building Codelab from "codelab.md"
+name: Codelab Export
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    paths: 'codelab.md'
+    paths:
+      - 'codelab.md'
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5.0.0
-      - name: Installing claat @ latest
-        run: go install github.com/googlecodelabs/tools/claat@latest
-      - name: Making the HTML
-        run: claat export codelab.md
-      - name: Set git identity
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-      - name: Git add commit and push 
-        run: |
-          git remote set-url origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
-          git add .
-          git commit -m "Added all the files"
-          git push
-        
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Important: This is needed to push back to the repo
 
-     
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
+      - name: Install claat
+        run: go install github.com/googlecodelabs/tools/claat@latest
+
+      - name: Export codelab
+        run: |
+          claat export codelab.md
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update codelab output" || echo "No changes to commit"
+          git push origin HEAD:<your-branch> --force
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
