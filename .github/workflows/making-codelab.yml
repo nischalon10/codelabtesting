@@ -25,13 +25,13 @@ jobs:
         run: go install github.com/googlecodelabs/tools/claat@latest
       - name: Making the HTML
         run: claat export codelab.md
-      - name: Installing claat @ latest
-        run: git add .
-      - name: Installing claat @ latest
-        run: git commit -m "Added the codelab HTML"
-      - name: Installing claat @ latest
-        run: git push origin codelab
-          
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: pages # The branch name where you want to push the assets
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
         
 
      
