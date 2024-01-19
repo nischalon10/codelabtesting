@@ -31,6 +31,8 @@ jobs:
         run: |
           git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
           git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+      - name : Git Checkout to the pages branch
+        run : git checkout pages || git checkout -b pages
       - name : Git Commit
         run : git commit -m "Testing"
       - name : Gti Push
