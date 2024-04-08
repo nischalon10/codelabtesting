@@ -30,3 +30,4 @@ jobs:
         uses: zyrouge/github-push-action@main
         with:
             github-token: $${{secrets.GH_PAT}}
+            verbose: true
