@@ -25,10 +25,6 @@ jobs:
       - name: Export codelab
         run: |
           claat export codelab.md
-          git config --global user.email "nischalon10@gmail.com"
-          git config --global user.name "nischalon10"
-          git add .
-          git commit -m "Update codelab output" || echo "No changes to commit"
-          git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+
+      - name: Push back to the repo
+        uses: zyrouge/github-push-action@main
