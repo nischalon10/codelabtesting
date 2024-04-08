@@ -28,3 +28,5 @@ jobs:
 
       - name: Push back to the repo
         uses: zyrouge/github-push-action@main
+        with:
+            github-token: $${{secrets.GH_PAT}}
