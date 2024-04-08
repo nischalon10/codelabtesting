@@ -26,8 +26,12 @@ jobs:
         run: |
           claat export codelab.md
 
-      - name: Push back to the repo
-        uses: zyrouge/github-push-action@main
-        with:
-            github-token: $${{secrets.GH_PAT}}
-            verbose: true
+      - name: Push back
+        run: |
+          git config user.name nischalon10
+          git config user.email nischalon10@gmail.com
+          git add .
+          git commit -m "Adding Codelab"
+          git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
