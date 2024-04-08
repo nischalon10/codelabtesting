@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'codelab.md'
+  workflow_dispatch:
 
 jobs:
   build:
