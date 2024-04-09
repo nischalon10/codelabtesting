@@ -226,3 +226,9 @@ This is a new section added to the markdown file. You can add your content here.
 Duration: 0:03:00
 
 This is a new section added to the markdown file. You can add your content here.
+
+
+## Another New Section
+Duration: 0:03:00
+
+This is a new section added to the markdown file. You can add your content here.
