@@ -27,7 +27,7 @@ In this codelab we are going to use the second option and author our codelab usi
 * [A blog that I used when getting started with Google Codelabs](https://medium.com/@mariopce/tutorial-how-to-make-tutorials-using-google-code-labs-gangdam-style-d62b35476816)
 
 ## Environment Setup
-Duration: 0:04:00
+Duration: 0:05:00
 
 In order to create a CodeLab you need *Go* and *claat* (the codelabs command line tool) installed.
 
@@ -128,7 +128,7 @@ In markdown I've found that the time is formatted hh:mm:ss
 Example
 ``` bash
 ## Section 1
-Duration: 0:10:00
+Duration: 0:11:00
 
 ## Section 2
 Duration: 0:05:00
