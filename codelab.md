@@ -214,3 +214,9 @@ One option is pushing it to github and serving it up from Netlify.
 
 If you'd like to create your own landing page for codelabs, [like this one](https://codelabs.developers.google.com), there is a tool to do that as well! 
 Check it out here: [CodeLabs Site](https://github.com/googlecodelabs/tools/blob/master/site/README.md)
+
+
+## New Section
+Duration: 0:03:00
+
+This is a new section added to the markdown file. You can add your content here.
