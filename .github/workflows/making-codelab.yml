@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name codelab-bot
           git config user.email nischalon10@gmail.com
-          mv "codelab-4-codelab-markdown" "docs" 
+          mv codelab-4-codelab-markdown/* .
           git add .
           git commit -m "Adding Codelab"
           git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting
