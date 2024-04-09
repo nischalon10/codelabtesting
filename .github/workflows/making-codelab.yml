@@ -36,3 +36,6 @@ jobs:
           git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
