@@ -248,3 +248,7 @@ Duration: 0:10:00
 
 This is a new section added to the markdown file. You can add your content here. Thank you
 
+## Another New Section \#5
+Duration: 0:05:00
+
+This is a new section added to the markdown file. You can add your content here. Thank you
