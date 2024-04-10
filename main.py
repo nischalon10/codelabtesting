@@ -1,6 +1,7 @@
 #Simple number guessing game
+import random
 
-numbertoguess = 5
+numbertoguess = random.randint(1, 100)
 
 while True:
     guess = int(input("Guess the number: "))
