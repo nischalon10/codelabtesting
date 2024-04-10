@@ -38,8 +38,11 @@ jobs:
           git commit -m "Adding Codelab"
           git checkout codelab-page
           git checkout codelab index.html codelab.json
-          git checkout codelab
-          git reset HEAD^
+          git add .
+          git commit -m "Updated the HTML and Json"
           git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting codelab-page
+          git checkout codelab
+          git reset --hard HEAD^
+          rm 
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
