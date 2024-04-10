@@ -3,7 +3,7 @@ name: Codelab Export
 on:
   push:
     branches:
-      - branch1
+      - codelab
     paths:
       - 'codelab.md'
   workflow_dispatch:
