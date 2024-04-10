@@ -37,6 +37,6 @@ jobs:
           git checkout -b codelab-page
           git add .
           git commit -m "Adding Codelab"
-          git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting branch2
+          git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting codelab-page
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
