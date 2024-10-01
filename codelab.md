@@ -2,6 +2,7 @@
 **Author:** Nischal Olety Nagesh  
 **Summary:** This CodeLab will guide you through setting up a GitHub repository to automatically compile a CodeLab markdown file and deploy it to a live site using GitHub Actions and Github Pages
 **Categories:** codelab, GitHub Actions, automation  
+**ID:** codelab-automator-setup
 **Environments:** Web  
 **Status:** Published  
 **Feedback link:** [GitHub Feedback](https://github.com/nischalon10/codelabtesting/issues/new)
