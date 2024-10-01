@@ -3,10 +3,10 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2024-05-15T22:58:47Z",
+  "updated": "2024-10-01T04:09:10Z",
   "id": "codelab-4-codelab-markdown",
-  "duration": 74,
-  "title": "CodeLab to Create a CodeLab",
+  "duration": 19,
+  "title": "Automate CodeLab Creation Using GitHub Actions",
   "summary": "Create a CodeLab Using Markdown",
   "source": "codelab.md",
   "theme": "",
@@ -20,6 +20,5 @@
   "tags": [
     "web"
   ],
-  "feedback": "https://github.com/Mrc0113/codelab-4-codelab",
   "url": "codelab-4-codelab-markdown"
 }
