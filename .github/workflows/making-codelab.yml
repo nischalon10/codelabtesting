@@ -32,7 +32,7 @@ jobs:
       - name: Push back
         run: |
           git config user.name codelab-bot
-          git config user.email nischalon10@gmail.com
+          git config user.email codelab-bot@users.noreply.github.com
           mv codelab-4-codelab-markdown/* .
           git add .
           git commit -m "Adding Codelab"
