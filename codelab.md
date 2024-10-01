@@ -179,3 +179,8 @@ Once the files are generated and pushed to the `codelab-page` branch, you can ho
 2. Scroll down to the **Pages** section.
 3. Set the branch to `codelab-page` and the folder to `/ (root)`.
 4. Your CodeLab will now be available at `https://<your-username>.github.io/<your-repository-name>`.
+
+## Conclusion  
+Duration: 0:01:00
+
+In this CodeLab, you’ve successfully set up a GitHub repository to automate the process of compiling and deploying CodeLabs using GitHub Actions and `claat`. Now, whenever you make changes to the `codelab.md` file in the `codelab` branch, the generated HTML and JSON files will automatically be pushed to the `codelab-page` branch and will be hosted live for users to access your latest changes.
