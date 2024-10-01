@@ -1,11 +1,10 @@
 
 **Author:** Nischal Olety Nagesh  
-**Summary:** This CodeLab will guide you through setting up a GitHub repository to automatically compile a CodeLab markdown file and deploy it to another branch using GitHub Actions.  
-**ID:** codelab-automator-setup  
+**Summary:** This CodeLab will guide you through setting up a GitHub repository to automatically compile a CodeLab markdown file and deploy it to a live site using GitHub Actions and Github Pages
 **Categories:** codelab, GitHub Actions, automation  
 **Environments:** Web  
 **Status:** Published  
-**Feedback link:** [GitHub Feedback](https://github.com/Mrc0113/codelab-automator)
+**Feedback link:** [GitHub Feedback](https://github.com/nischalon10/codelabtesting/issues/new)
 
 # Automate CodeLab Creation Using GitHub Actions
 
@@ -29,7 +28,8 @@ Duration: 0:02:00
 3. Clone the repository to your local machine.
 
 ### Step 1.2: Create the Branches
-1. Create a `codelab` branch where you'll place the markdown file.
+In addition to your existing main branch or any other branch add these two branches with this naming convention
+1. Create a `codelab` branch where you'll place the markdown file and most importantly `codelab.yml` file
 2. Create a `codelab-page` branch to hold the compiled CodeLab files.
 
 ```bash
@@ -123,7 +123,7 @@ jobs:
       - name: Push back
         run: |
           git config user.name "codelab-bot"
-          git config user.email "nischalon10@gmail.com"
+          git config user.email "<insert your email>"
           mv codelab-4-codelab-markdown/* .
           git add .
           git commit -m "Adding Codelab"
@@ -131,7 +131,7 @@ jobs:
           git checkout codelab index.html codelab.json
           git add .
           git commit -m "Updated the HTML and Json"
-          git push https://nischalon10:${{secrets.GH_PAT}}@github.com/nischalon10/codelabtesting codelab-page
+          git push https://<insert your username>:${{secrets.GH_PAT}}@github.com/<insert your username>/<insert your repository>.git codelab-page
           git checkout codelab
           git reset --hard HEAD^
         env:
@@ -144,6 +144,10 @@ You’ll need to set up a secret in your GitHub repository for authentication.
 1. Go to your repository’s Settings.
 2. Click **Secrets and variables** > **Actions**.
 3. Create a new secret called `GH_PAT` and paste your GitHub Personal Access Token here.
+
+Here are some resources on how to make a PAT and learn about Secrets 
+- [Github PATs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+- [Github Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
 
 ## Step 4: Test the Workflow  
 Duration: 0:03:00
